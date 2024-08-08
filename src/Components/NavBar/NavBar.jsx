@@ -29,11 +29,11 @@ function NavBar() {
             scroll ? "p-4" : "p-7"
           } duration-700 `}
         >
-          <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+          <NavLink href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
             <span className="self-center text-white text-4xl font-bold whitespace-nowrap dark:text-white">
               START FRAMEWORK
             </span>
-          </a>
+          </NavLink>
           <button
             data-collapse-toggle="navbar-default"
             type="button"

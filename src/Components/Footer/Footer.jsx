@@ -5,6 +5,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { IoMdBasketball } from "react-icons/io";
+import { NavLink } from "react-router-dom";
 
 function Footer() {
   return (
@@ -20,30 +21,30 @@ function Footer() {
             <div className="text-center mb-3">
               <h3 className="text-3xl mb-2">AROUND THE WEB</h3>
               <div className="flex mt-4 justify-center items-center sm:mt-4">
-                <a
-                  href="#"
+                <NavLink
+                  to="https://www.facebook.com/"
                   className="text-white p-2 border-2 rounded-full hover:bg-slate-50 hover:text-green-400 dark:hover:text-white"
                 >
                   <FaFacebookF />
-                </a>
-                <a
-                  href="#"
+                </NavLink>
+                <NavLink
+                  to="https://x.com/?lang=en"
                   className="text-white p-2 border-2 rounded-full hover:bg-slate-50 hover:text-green-400 dark:hover:text-white ms-5"
                 >
                   <FaTwitter />
-                </a>
-                <a
-                  href="#"
+                </NavLink>
+                <NavLink
+                  to="https://www.linkedin.com/"
                   className="text-white p-2 border-2 rounded-full hover:bg-slate-50 hover:text-green-400 dark:hover:text-white ms-5"
                 >
                   <FaLinkedin />
-                </a>
-                <a
-                  href="#"
+                </NavLink>
+                <NavLink
+                  to="#"
                   className="text-white p-2 border-2 rounded-full hover:bg-slate-50 hover:text-green-400 dark:hover:text-white ms-5"
                 >
                   <IoMdBasketball />
-                </a>
+                </NavLink>
               </div>
             </div>
             <div className="text-center mb-3">

@@ -2,14 +2,12 @@
 
 import React, { useEffect, useState } from "react";
 import Modal from "react-modal";
-import img1 from "../../assets/portfolio/poert1.png";
-import img2 from "../../assets/portfolio/port2.png";
-import img3 from "../../assets/portfolio/port3.png";
 import { FaPlus } from "react-icons/fa";
 import Header from "../Utility/Header/Header";
 
-Modal.setAppElement("#root"); // Set the app element for accessibility
+Modal.setAppElement("#root"); 
 
+const images = Object.values(import.meta.glob('../../assets/portfolio/*.{png,jpg,jpeg,PNG,JPEG}', { eager: true, as: 'url' }));
 function Portfolio() {
   useEffect(() => {
     document.title = "Portfolio";
@@ -33,7 +31,7 @@ function Portfolio() {
         <h2 className="text-4xl my-4 font-bold text-[#2c3e50] uppercase">Portfolio Component</h2>
         <Header color={"#2c3e50"} />
         <div className="grid gap-5 px-20 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          {[img1, img2, img3, img1, img2, img3].map((image, index) => (
+          {images.map((image, index) => (
             <div
               key={index}
               className="relative rounded-lg group overflow-hidden cursor-pointer"
